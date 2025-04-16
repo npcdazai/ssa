@@ -1,0 +1,37 @@
+.facilities-section {
+    background: linear-gradient(to bottom, #002940 50%, white 50%);
+    padding: 4rem 0;
+  }
+  
+  .facility-card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .facility-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .img-wrapper {
+    position: relative;
+  }
+  
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 10px 14px;
+  }
+
+@media (min-width: 992px) {
+  .mt-lg-5 {
+    margin-top: 3rem !important;
+  }
+}
+  

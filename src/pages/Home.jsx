@@ -6,6 +6,9 @@ import Glimples from '../Components/Glimples';
 import Program from '../Components/Programs';
 import ConnectivitySection from '../Components/ConnectivitySection';
 import ProfessionalsSection from '../Components/ProfessionalsSection';
+import Facilities from '../Components/Facilities';
+import Banners from '../Components/Banners';
+
 
 const Home = () => {
     return (
@@ -17,6 +20,8 @@ const Home = () => {
             <Program/>
             <ConnectivitySection/>
             <ProfessionalsSection/>
+            <Facilities/>
+            <Banners/>
         </div>
     );
 };
