@@ -13,15 +13,15 @@ import Banners from '../Components/Banners';
 const Home = () => {
     return (
         <div style={{ display: "flex", flexDirection: "column", width: "100%", gap: "3rem" }}>
-            <HeroSection />
-            <AboutUS/>
-            <KeyFeatures/>
-            <Glimples/>
-            <Program/>
-            <ConnectivitySection/>
-            <ProfessionalsSection/>
-            <Facilities/>
-            <Banners/>
+            <div id="hero-section"><HeroSection /></div>
+            <div id="about-section"><AboutUS/></div>
+            <div id="features-section"><KeyFeatures/></div>
+            <div id="glimples-section"><Glimples/></div>
+            <div id="programs-section"><Program/></div>
+            <div id="connectivity-section"><ConnectivitySection/></div>
+            <div id="professionals-section"><ProfessionalsSection/></div>
+            <div id="facilities-section"><Facilities/></div>
+            <div id="banners-section"><Banners/></div>
         </div>
     );
 };

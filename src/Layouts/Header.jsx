@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { NavLink, useLocation } from 'react-router-dom';
 import Logo from "../assets/SSA-Logo.svg";
 
 const navItems = [
-    { id: 1, title: "about us", path: "/about" },
-    { id: 2, title: "matches", path: "/matches" },
-    { id: 3, title: "programs", path: "/programs" },
-    { id: 4, title: "coaches", path: "/coaches" },
-    { id: 5, title: "amenities", path: "/amenities" },
-    { id: 6, title: "events", path: "/events" },
-    { id: 7, title: "blogs", path: "/blogs" },
+    { id: 1, title: "about us", path: "#about-section" },
+    { id: 2, title: "matches", path: "#matches-section" },
+    { id: 3, title: "programs", path: "#programs-section" },
+    { id: 4, title: "coaches", path: "#professionals-section" },
+    { id: 5, title: "amenities", path: "#facilities-section" },
+    { id: 6, title: "events", path: "#banners-section" },
+    { id: 7, title: "blogs", path: "#blogs-section" },
 ];
 
 const Header = () => {
     const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.querySelector(location.hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+
+    const handleNavClick = (e, path) => {
+        e.preventDefault();
+        const element = document.querySelector(path);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            window.history.pushState({}, '', path);
+        }
+    };
 
     return (
         <Navbar
@@ -36,14 +54,15 @@ const Header = () => {
                 <Navbar.Collapse id="navbar-nav">
                     <Nav className="mx-auto gap-3 text-center text-lg-start">
                         {navItems.map((val) => (
-                            <NavLink
+                            <a
                                 key={val.id}
-                                to={val.path}
-                                className={`text-white text-capitalize nav-hover Matter px-2 ${location.pathname === val.path ? 'fw-bold' : ''}`}
+                                href={val.path}
+                                onClick={(e) => handleNavClick(e, val.path)}
+                                className="text-white text-capitalize nav-hover Matter px-2"
                                 style={{ fontSize: "13px", textDecoration: "none" }}
                             >
                                 {val.title}
-                            </NavLink>
+                            </a>
                         ))}
                     </Nav>
 
