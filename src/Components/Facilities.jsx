@@ -70,52 +70,49 @@ const renderCard = ({ id, title, badges, text, textColor }) => (
 
 const Facilities = () => {
     return (
-
-        <div>
-            <div className=" container d-flex justify-content-between align-items-center mb-4">
-                <div>
-                    <h4 style={{ fontSize: "36px", color: "#003A5D" }} className="fw-bold boldMatter">Facilities</h4>
-                    <p className="text-muted Matter " style={{ maxWidth: '400px', fontWeight: 100 }}>
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                </div>
-            </div>
-            <div
-                style={{
-                    background: 'linear-gradient(to top, #173931 0%, #003A5D 100%)',
-                    color: 'white',
-                    position: "relative",
-                    height: "654px",
-                    marginTop: "9rem"
-                }}
-            >
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "-12rem",
-                        left: 400,
-                        display: "flex",
-                        flexDirection: "row",
-                        alignItems: "center"
-                    }}
-                >
-                    {cardData.filter(card => card.position === "top").map(renderCard)}
-                </div>
-
-                <div
-                    style={{
-                        position: "absolute",
-                        bottom: "-25rem",
-                        right: 0,
-                        display: "flex",
-                        flexDirection: "row",
-                        alignItems: "center"
-                    }}
-                >
-                    {cardData.filter(card => card.position === "bottom").map(renderCard)}
-                </div>
-            </div>
+        <div className="tr">
+        <div className="container d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h4 style={{ fontSize: "36px", color: "#003A5D" }} className="fw-bold boldMatter">Facilities</h4>
+            <p className="text-muted Matter" style={{ maxWidth: '400px', fontWeight: 100 }}>
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+          </div>
         </div>
+      
+        <div
+          style={{
+            background: 'linear-gradient(to top, #173931 0%, #003A5D 100%)',
+            color: 'white',
+            position: "relative",
+            height: "654px",
+            marginTop: "9rem"
+          }}
+        >
+          <div className="top-cards facilities-wrapper" style={{
+            position: "absolute",
+            top: "-12rem",
+            left: 400,
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center"
+          }}>
+            {cardData.filter(card => card.position === "top").map(renderCard)}
+          </div>
+      
+          <div className="bottom-cards facilities-wrapper" style={{
+            position: "absolute",
+            bottom: "-25rem",
+            right: 0,
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center"
+          }}>
+            {cardData.filter(card => card.position === "bottom").map(renderCard)}
+          </div>
+        </div>
+      </div>
+      
     );
 };
 

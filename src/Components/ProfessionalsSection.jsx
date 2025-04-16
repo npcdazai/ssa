@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import whiteperson from "../assets/white.png"
-import whiteperson1 from "../assets/white1.png"
-import whiteperson2 from "../assets/white2.png"
+import whiteperson from "../assets/white.png";
+import whiteperson1 from "../assets/white1.png";
+import whiteperson2 from "../assets/white2.png";
 
 const professionals = [
     {
@@ -25,26 +25,44 @@ const professionals = [
 const ProfessionalsSection = () => {
     return (
         <Container className="my-5">
-            <div className="d-flex justify-content-between align-items-center mb-4">
+            <div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
                 <div>
-                    <h4 style={{fontSize:"36px" , color:"#003A5D"}} className="fw-bold boldMatter">Meet our professionals</h4>
-                    <p className="text-muted Matter " style={{ maxWidth: '400px' , fontWeight:100}}>
+                    <h4 style={{ fontSize: "32px", color: "#003A5D" }} className="fw-bold boldMatter">
+                        Meet our professionals
+                    </h4>
+                    <p className="text-muted Matter" style={{ maxWidth: '400px', fontWeight: 100 }}>
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                     </p>
                 </div>
-                <Button variant="link" className="text-decoration-none">
-                    View All &rarr;
-                </Button>
+                <div className="ms-md-auto">
+                    <Button variant="link" className="text-decoration-none px-0">
+                        View All &rarr;
+                    </Button>
+                </div>
             </div>
 
-            <Row>
+            <Row className="gy-4">
                 {professionals.map((pro, index) => (
-                    <Col key={index} md={4} className="mb-4">
-                        <Card className="border-0 text-start">
-                            <Card.Img variant="top" src={pro.image} className="rounded" />
+                    <Col key={index} xs={12} sm={6} md={4}>
+                        <Card className="border-0 text-start h-100">
+                            <Card.Img
+                                variant="top"
+                                src={pro.image}
+                                className="rounded"
+                                style={{ objectFit: 'cover', height: '300px', width: '100%' }}
+                            />
                             <Card.Body>
-                                <Card.Title style={{color:"#003A5D" , fontSize:"25px"}} className="fw-semibold mid">{pro.name}</Card.Title>
-                                <i><Card.Text style={{fontSize:"16px"}} className="text-muted Matter">{pro.title}</Card.Text></i>
+                                <Card.Title
+                                    style={{ color: "#003A5D", fontSize: "22px" }}
+                                    className="fw-semibold mid"
+                                >
+                                    {pro.name}
+                                </Card.Title>
+                                <i>
+                                    <Card.Text style={{ fontSize: "16px" }} className="text-muted Matter">
+                                        {pro.title}
+                                    </Card.Text>
+                                </i>
                             </Card.Body>
                         </Card>
                     </Col>

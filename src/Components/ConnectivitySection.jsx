@@ -24,18 +24,20 @@ const connectivityData = [
 const ConnectivitySection = () => {
   return (
     <Container fluid className="p-0">
-      <Row className="gx-0">
+      <Row className="gx-0 flex-column flex-md-row">
         <Col
+          xs={12}
           md={5}
-          className="d-flex flex-column justify-content-center px-5"
+          className="d-flex flex-column justify-content-center px-4 px-md-5 py-5"
           style={{
             background: 'linear-gradient(to top, #173931 0%, #003A5D 100%)',
             color: 'white',
-            minHeight: '100%'
           }}
         >
-          <h6 style={{fontSize:"25px" , marginBottom:"1rem" , color:"#fff" }} className="text-uppercase mid">Launching</h6>
-          <h2 className="fw-bold mb-4 boldMatter " style={{ lineHeight: '1.3' }}>
+          <h6 className="text-uppercase mid mb-3" style={{ fontSize: "22px", color: "#fff" }}>
+            Launching
+          </h6>
+          <h2 className="fw-bold mb-3 boldMatter" style={{ lineHeight: '1.3' }}>
             Signature Slam Academy <br /> Hunter Valley
           </h2>
           <h5 className="mb-3 Matter">SSA Connectivity</h5>
@@ -43,29 +45,42 @@ const ConnectivitySection = () => {
             {connectivityData.map((item, idx) => (
               <ListGroup.Item
                 key={idx}
-                className="border-0 ps-0 Matter"
+                className="border-0 ps-0 Matter d-flex justify-content-between align-items-center"
                 style={{
                   background: 'transparent',
                   color: '#fff',
-                  marginBottom: '8px',
-                  fontSize: '1rem'
+                  fontSize: '1rem',
+                  paddingLeft: 0,
+                  paddingRight: 0,
+                  paddingTop: '0.5rem',
+                  paddingBottom: '0.5rem'
                 }}
               >
-                {item.icon}
-                {item.name} ............................... <strong>{item.distance}</strong>
+                <span className="d-flex align-items-center">
+                  {item.icon}
+                  {item.name}
+                </span>
+                <strong>{item.distance}</strong>
               </ListGroup.Item>
             ))}
           </ListGroup>
         </Col>
 
         {/* Right Column */}
-        <Col md={7}>
-          <Image
-            src={straks}
-            alt="Hunter Valley"
-            fluid
-            style={{ height: '100vh', objectFit: 'cover', width: '100%' }}
-          />
+        <Col xs={12} md={7}>
+          <div style={{ height: '100%', maxHeight: '100vh', overflow: 'hidden' }}>
+            <Image
+              src={straks}
+              alt="Hunter Valley"
+              fluid
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                maxHeight: '600px' // for small devices
+              }}
+            />
+          </div>
         </Col>
       </Row>
     </Container>

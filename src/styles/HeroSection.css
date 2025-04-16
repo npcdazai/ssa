@@ -3,8 +3,16 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  height: 768px;
+  min-height: 768px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .overlay {
@@ -22,6 +30,8 @@
   position: relative;
   z-index: 2;
   padding: 0 20px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .section-label {
@@ -36,6 +46,7 @@
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 30px;
+  text-wrap: balance;
 }
 
 .hero-bold {
@@ -55,4 +66,55 @@
     rgba(0, 58, 93, 1) 54%,
     rgba(78, 169, 223, 0) 100%
   );
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding: 60px 20px;
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .section-label {
+    font-size: 14px;
+    letter-spacing: 4px;
+  }
+
+  .hero-sub .slogan {
+    font-size: 14px;
+    padding: 0.5rem;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .hero-sub .slogan {
+    font-size: 12px;
+    padding: 0.4rem;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
 }

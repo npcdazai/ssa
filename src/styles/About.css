@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+    .about-section {
+      flex-direction: column !important;
+      gap: 2rem !important;
+      padding: 0 1rem;
+    }
+    .eer{
+        display: none;
+    }
+
+    .hgg{
+        margin-bottom: 3rem;
+    }
+
+    .about-image1,
+    .about-image2 {
+      position: static !important;
+      width: 100% !important;
+      height: auto !important;
+      margin-bottom: 1rem;
+      display: none;
+    }
+  
+    .about-text {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  
+    .quote-section {
+      height: auto !important;
+      padding-top: 4rem !important;
+      padding-bottom: 3rem !important;
+    }
+  
+    .quote-text {
+      font-size: 22px !important;
+    }
+  
+    .quote-author {
+      width: 100% !important;
+      align-items: center !important;
+      text-align: center;
+    }
+  
+    .quote-author span {
+      display: block;
+    }
+  }
+  

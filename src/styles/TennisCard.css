@@ -1,26 +1,84 @@
+/* ---------- Default Desktop Styles ---------- */
 .tennis-card .video-thumbnail {
-    position: relative;
-    overflow: hidden;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.tennis-card .video-thumbnail img {
+  width: 40%;
+  height: auto;
+  display: block;
+}
+
+.top-cards {
+  position: absolute;
+  top: -12rem;
+  left: 400px;
+}
+
+.bottom-cards {
+  position: absolute;
+  bottom: -25rem;
+  right: 0;
+}
+
+/* ---------- Responsive for Tablets (≤ 992px) ---------- */
+@media (max-width: 992px) {
+  .facilities-wrapper {
+    position: static !important;
+    flex-direction: column !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    align-items: center !important;
+    margin-top: 2rem;
   }
-  
+  .tr{
+    display: none;
+  }
+
+  .tennis-card {
+    width: 90% !important;
+    padding: 1rem !important;
+    margin-bottom: 2rem;
+  }
+
+  .bottom-cards {
+    margin-top: 2rem;
+  }
+
   .tennis-card .video-thumbnail img {
-    width: 40%;
-    height: auto;
-    display: block;
+    width: 100% !important;
   }
-  
-  /* .tennis-card .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 0.5rem 0.75rem;
-    cursor: pointer;
+}
+
+/* ---------- Responsive for Mobile (≤ 768px) ---------- */
+@media (max-width: 768px) {
+  .top-cards,
+  .bottom-cards {
+    position: static !important;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
   }
-   */
+
+  .facilities-background {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    height: auto !important;
+  }
+
+  .tennis-card .video-thumbnail img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .tennis-card {
+    width: 100% !important;
+  }
+  .tr{
+    display: none;
+  }
+
+}
