@@ -5,7 +5,7 @@ import trans from '../assets/trans.png';
 
 const Banners = () => {
   return (
-    <div style={{ marginTop: '23rem' }}>
+    <div className='bannerTop'>
       <Row className="gx-0">
         {/* Left Banner */}
         <Col md={6} className="position-relative">

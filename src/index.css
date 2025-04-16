@@ -1,67 +1,76 @@
 .motto-bar {
-    background: linear-gradient(to right, rgba(78, 169, 223, 0) 0%, rgba(0, 58, 93, 1) 54%, rgba(78, 169, 223, 0) 100%);
-    padding: 10px 0;
-    text-align: center;
-  }
+  background: linear-gradient(
+    to right,
+    rgba(78, 169, 223, 0) 0%,
+    rgba(0, 58, 93, 1) 54%,
+    rgba(78, 169, 223, 0) 100%
+  );
+  padding: 10px 0;
+  text-align: center;
+}
 
-  .motto-text {
-    color: white;
-    letter-spacing: 5px;
-    font-size: 14px;
-    margin: 0;
-  }
+.motto-text {
+  color: white;
+  letter-spacing: 5px;
+  font-size: 14px;
+  margin: 0;
+}
 
-  .dot {
-    margin: 0 12px;
-  }
+.dot {
+  margin: 0 12px;
+}
 
-  @font-face {
-    font-family: 'Matter';
-    src: url('fonts/Matter-Light.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'MatterSemiBold';
-    src: url('fonts/Matter-SemiBold.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'MatterBold';
-    src: url('fonts/Matter-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-  }
-  
+@font-face {
+  font-family: "Matter";
+  src: url("fonts/Matter-Light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
 
-  .mid {
-    font-family: 'MatterSemiBold', sans-serif;
-  }
-  
-  
-  .boldMatter {
-    font-family: 'MatterBold', sans-serif;
-  }
-  
-  .Matter {
-    font-family: 'Matter', sans-serif;
-  }
-  
+@font-face {
+  font-family: "MatterSemiBold";
+  src: url("fonts/Matter-SemiBold.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
 
-  .card img {
-    object-fit: cover;
-    height: 300px;
-  }
-.oii{
+@font-face {
+  font-family: "MatterBold";
+  src: url("fonts/Matter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.mid {
+  font-family: "MatterSemiBold", sans-serif;
+}
+
+.boldMatter {
+  font-family: "MatterBold", sans-serif;
+}
+
+.Matter {
+  font-family: "Matter", sans-serif;
+}
+
+.card img {
+  object-fit: cover;
+  height: 300px;
+}
+.oii {
   padding: 2rem 0;
-}  
+}
+
+.bannerTop {
+  margin-top: 23rem;
+}
 
 @media (max-width: 768px) {
-  .oii{
+  .oii {
     padding: 1rem 0;
-  }  
+  }
+  .bannerTop {
+    margin-top:  0px;
+  }
   
 }
