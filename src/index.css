@@ -55,4 +55,13 @@
     object-fit: cover;
     height: 300px;
   }
+.oii{
+  padding: 2rem 0;
+}  
+
+@media (max-width: 768px) {
+  .oii{
+    padding: 1rem 0;
+  }  
   
+}

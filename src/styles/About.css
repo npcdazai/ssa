@@ -1,17 +1,98 @@
-@media (max-width: 768px) {
+.about-section {
+    position: relative;
+  }
+  
+  .eer {
+    width: 395px;
+    height: 506px;
+  }
+  
+  .about-image1 {
+    width: 395px;
+    height: 506px;
+    position: absolute;
+    bottom: -2rem;
+    z-index: 20;
+    left: 180px;
+  }
+  
+  .about-image2 {
+    width: 293px;
+    height: 230px;
+    position: absolute;
+    bottom: -4rem;
+    right: 200px;
+    z-index: 30;
+  }
+  
+  .about-text {
+    max-width: 509px;
+  }
+  
+  .about-description {
+    line-height: 23px;
+  }
+  
+  .read-more {
+    cursor: pointer;
+  }
+  
+  .quote-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 468px;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .quote-text {
+    max-width: 800px;
+    font-size: 35px;
+  }
+  
+  .quote-author {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .position-title {
+    font-size: 16px;
+    font-weight: 100;
+  }
+  
+  @media (max-width: 768px) {
     .about-section {
       flex-direction: column !important;
       gap: 2rem !important;
       padding: 0 1rem;
+      overflow-x: hidden;
     }
-    .eer{
-        display: none;
+  
+    .of{
+        overflow-x: hidden;
     }
-
-    .hgg{
-        margin-bottom: 3rem;
+    .eer {
+      display: none;
     }
-
+  
     .about-image1,
     .about-image2 {
       position: static !important;
@@ -24,6 +105,11 @@
     .about-text {
       width: 100% !important;
       max-width: 100% !important;
+      margin-bottom: 3rem;
+    }
+  
+    .about-pad {
+      padding: 1rem;
     }
   
     .quote-section {

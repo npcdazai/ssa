@@ -10,16 +10,18 @@ const navItems = [
     "About Us", "Coaches", "News", "Matches", "Events", "FAQs", "Programs", "Amenities", "Blogs"
 ];
 
+
+
 const Footer = () => {
     return (
         <div style={{ backgroundColor: "#fff", borderTop: "1px solid #ddd" }}>
-            <Container style={{ padding: "2rem 0" }}>
+            <Container className='oii'>
                 <Row className="align-items-center">
-                    <Col md={4} className="mb-3 mb-md-0 text-center text-md-start">
+                    <Col xs={12} md={4} className="mb-3 mb-md-0 text-center text-md-start">
                         <Image src={footerImg} height="107" width="150" alt="SSA Logo" />
                     </Col>
 
-                    <Col md={8}>
+                    <Col xs={12} md={8}>
                         <div className="d-flex flex-wrap justify-content-center justify-content-md-evenly">
                             {navItems.map((item, index) => (
                                 <div key={index} className="text-center mb-2 px-2" style={{ fontSize: "14px", minWidth: "100px" }}>
@@ -30,26 +32,27 @@ const Footer = () => {
 
                         <hr style={{ margin: "1rem 0" }} />
 
-                        <Row className="justify-content-between text-center text-md-start">
-                            <Col md={4} className="mb-3 mb-md-0">
-                                <h6 style={{ color: "#002F50" }} className="fw-bold mb-2 mid">Signature Slam Academy</h6>
+                        <Row className="text-center text-md-start">
+                            <Col xs={12} md={4} className="mb-4 mb-md-0">
+                                <h6 style={{ color: "#002F50" }} className="fw-bold mb-2">Signature Slam Academy</h6>
                                 <div style={{ fontSize: "14px" }}>
                                     <p className="d-flex align-items-start justify-content-center justify-content-md-start gap-2 pt-3">
                                         <GoLocation />
-                                        30 Wills Hill Road, Lovedale, NSW
+                                        <span>30 Wills Hill Road, Lovedale, NSW</span>
                                     </p>
                                     <p className="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
                                         <FaPhoneAlt />
-                                        +91 9564258752
+                                        <span>+91 9564258752</span>
                                     </p>
                                     <p className="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
                                         <HiOutlineMail />
-                                        info@ssagroup.com
+                                        <span>info@ssagroup.com</span>
                                     </p>
                                 </div>
                             </Col>
-                            <Col md={4} className="text-center text-md-start">
-                                <h6 style={{ color: "#002F50" }} className="fw-bold mb-2 mid">Connect with us</h6>
+
+                            <Col xs={12} md={4} className="text-center text-md-start">
+                                <h6 style={{ color: "#002F50" }} className="fw-bold mb-2">Connect with us</h6>
                                 <div className="d-flex justify-content-center justify-content-md-start gap-3 mt-3">
                                     <FaFacebookF />
                                     <FaXTwitter />
@@ -76,7 +79,7 @@ const Footer = () => {
                         <Col xs={12} md={4} className="mb-2 mb-md-0 text-center">
                             © 2023 All Rights Reserved www.signaturestreamacademy.com
                         </Col>
-                        <Col xs={12} md={4} className="text-md-end">
+                        <Col xs={12} md={4} className="text-md-end text-center text-md-end">
                             <a href="/privacy" style={{ color: '#ffffff', textDecoration: 'none' }}>Privacy Policy</a>
                         </Col>
                     </Row>
